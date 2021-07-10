@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { AppProps } from 'next/app'
-import '@common/css/layout.scss'
+import CssBaseline from '@material-ui/core/CssBaseline'
 
 /**
  * withRedux HOC
@@ -8,7 +8,10 @@ import '@common/css/layout.scss'
  */
 
 const CustomApp: FC<AppProps> = ({ Component, pageProps }) => (
-  <Component {...pageProps} />
+  <>
+    <CssBaseline />
+    <Component {...pageProps} />
+  </>
 )
 
 export default CustomApp
